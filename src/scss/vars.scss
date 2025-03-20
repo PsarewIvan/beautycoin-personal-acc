@@ -1,0 +1,52 @@
+$desktop: 'screen and (max-width: 1240px)';
+$onlysmalldesktop: 'screen and (min-width: 1025px) and (max-width: 1149px)';
+$tablet: 'screen and (max-width: 1024px)';
+$phone: 'screen and (max-width: 767px)';
+$smallphone: 'screen and (max-width: 340px)';
+
+@mixin tablet {
+    @media (max-width: 1199px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+
+$main-font: 'Inter', 'Helvetica', sans-serif;
+
+$background-primary: rgba(255, 255, 255, 1);
+$background-secondary: #f9f1f0;
+$darkner-4: rgba(0, 0, 0, 0.04);
+$darkner-8: rgba(0, 0, 0, 0.08);
+$darkner-16: rgba(0, 0, 0, 0.16);
+$darkner-24: rgba(0, 0, 0, 0.24);
+$accent-50: #fbeef4;
+$accent-100: #f7dee8;
+$accent-300: #e89bba;
+$accent-500: #d8598c;
+$accent-600: #ad4770;
+$accent-700: #823554;
+$text-primary: #2f2227;
+$text-primary-invert: #fff;
+$text-secondary: rgba(47, 34, 39, 0.8);
+$text-secondary-invert: rgba(255, 255, 255, 0.72);
+$text-third: rgba(47, 34, 39, 0.56);
+
+$link-100: #cce1f1;
+$link-300: #66a6d4;
+$link-500: #006bb8;
+$link-600: #005693;
+$success-500: #26ba5a;
+$success-600: #329f5b;
+$error-500: #ff5459;
+$error-600: #cc4347;
+$attention-500: #ffd43a;
+$attention-600: #ccaa2e;
+$pink: #e37ab2;
+$pastel-pink: #f1c2d2;
+$purple: #9d6099;
+$purple-dark: #5c4b75;

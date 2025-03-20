@@ -2,9 +2,10 @@
 @use 'fonts';
 @use 'vars';
 
-// @use './components/header.scss';
+@use './components/footer.scss';
+@use './components/header.scss';
 
-// @use './pages/index.scss';
+@use './pages/index.scss';
 
 * {
     box-sizing: border-box;
@@ -31,6 +32,9 @@ body {
 }
 
 .main {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .hidden {

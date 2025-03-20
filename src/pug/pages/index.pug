@@ -6,6 +6,27 @@ block variables
 block content
     //- include ../components/button.pug
     //- include ../components/select.pug
-    //- include ../icons/icon-settings.pug
+    include ../icons/icon-coin.pug
 
     main.main
+        .content
+            .content-title
+                .content-title__title-wrapper
+                    h1.content-title__title Баланс
+                    .content-title__sub-title Beautycoin ID: 
+                        a.content-title__link(href='#') 1234567890
+                .content-title__balance
+                    span 241&nbsp;916,25
+                    img.content-title__icon(src="img/coin.svg")
+            .transfer
+                .transfer__title Движение за месяц
+                .transfer__cards
+                    .transfer-card.transfer-card_accrued
+                        .transfer-card__title Начислено
+                        .transfer-card__balance 241&nbsp;916,25
+                    .transfer-card.transfer-card_spent
+                        .transfer-card__title Потрачено
+                        .transfer-card__balance 241&nbsp;916,25
+                    .transfer-card.transfer-card_burned
+                        .transfer-card__title Сгорело
+                        .transfer-card__balance 241&nbsp;916,25

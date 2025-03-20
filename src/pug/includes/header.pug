@@ -1,46 +1,27 @@
 block header
-    include ../icons/icon-logo.pug
-    include ../icons/icon-logo-text.pug
-    include ../icons/icon-exit.pug
-    include ../icons/icon-nav-index.pug
-    include ../icons/icon-nav-index-active.pug
-    include ../icons/icon-nav-profile.pug
-    include ../icons/icon-nav-profile-active.pug
-    include ../icons/icon-nav-support.pug
-    include ../icons/icon-nav-support-active.pug
 
-    header.header.js-header
-        .title-wrapper
-            .title-logo
-                +icon-logo('title-logo__icon')
-                +icon-logo-text('title-logo__text-icon')
-            .actions
-                .status.status_ok Подписка до 28.02.2026
-                .status.status_warning.hidden Подписка до 28.02.2026
-                .status.status_error.hidden Подписка до 28.02.2026
-        nav.nav
-            ul.nav__list
-                li.nav-element(class=page === 'index' ? 'nav-element_active' : '')
-                    a.nav-element__link(href='./')
-                        if page === 'index'
-                            +icon-nav-index-active('nav-element__icon')
-                        if page !== 'index'
-                            +icon-nav-index('nav-element__icon')
-                        span Мои отчёты
-                li.nav-element(class=page === 'profile' ? 'nav-element_active' : '')
-                    a.nav-element__link(href='./profile.html')
-                        if page === 'profile'
-                            +icon-nav-profile-active('nav-element__icon')
-                        if page !== 'profile'
-                            +icon-nav-profile('nav-element__icon')
-                        span Профиль
-                li.nav-element(class=page === 'support' ? 'nav-element_active' : '')
-                    a.nav-element__link(href='./support.html')
-                        if page === 'support'
-                            +icon-nav-support-active('nav-element__icon')
-                        if page !== 'support'
-                            +icon-nav-support('nav-element__icon')
-                        span Поддержка
-        button.header-button
-            +icon-exit('header-button__icon')
-            span.header-button__text Выйти
+    include ../icons/icon-exit.pug
+    include ../icons/icon-coin.pug
+    include ../icons/icon-user.pug
+    include ../icons/icon-left-right.pug
+
+    header.header
+        .header__content
+            a.header__logo(href='/')
+                img(src='img/logo.svg')
+            nav.nav
+                ul.nav__list
+                    li.nav-element(class=page === 'index' ? 'nav-element_active' : '')
+                        a.nav-element__link(href='./' class=page === 'index' ? 'nav-element__link_active' : '')
+                            +icon-coin('nav-element__icon')
+                            span Баланс
+                    li.nav-element(class=page === 'history' ? 'nav-element_active' : '')
+                        a.nav-element__link(href='./history.html' class=page === 'history' ? 'nav-element__link_active' : '')
+                            +icon-left-right('nav-element__icon')
+                            span История
+                    li.nav-element(class=page === 'profile' ? 'nav-element_active' : '')
+                        a.nav-element__link(href='./profile.html' class=page === 'profile' ? 'nav-element__link_active' : '')
+                            +icon-user('nav-element__icon')
+                            span Профиль
+            button.header__button
+                +icon-exit('header__button-icon')

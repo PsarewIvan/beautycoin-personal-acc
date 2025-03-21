@@ -4,8 +4,81 @@ block variables
   - var page = 'history'
 
 block content
-    //- include ../components/button.pug
-    //- include ../components/select.pug
-    //- include ../icons/icon-settings.pug
+    include ../components/select.pug
+    include ../icons/icon-chevron-left.pug
 
     main.main
+        .content
+            .content-title
+                .content-title__title-wrapper
+                    h1.content-title__title История операций
+            .filters
+                +select({placeholder: 'Тип операции', elements: [{value: 'value1', text: 'Операция 1'},{value: 'value2', text: 'Операция 2'}]})
+                +select({elements: [{value: 'value1', text: 'За месяц', selected: true},{value: 'value2', text: 'За день'}]})
+                +select({placeholder: 'Партнёр', elements: [{value: 'value1', text: 'Партнёр 1'},{value: 'value2', text: 'Партнёр 2'}]})
+            .table-history
+                .table-history__head
+                    .table-history__cell-h Тип
+                    .table-history__cell-h Дата и время
+                    .table-history__cell-h Партнёр
+                    .table-history__cell-h.table-history__cell-h_right Сумма
+                    .table-history__cell-h Примечание
+                .table-history__row
+                    .table-history__cell
+                        .table-history__badge.table-history__badge_green Начислено
+                    .table-history__cell 30.09.2025 20:39
+                    .table-history__cell
+                        .table-history__partner
+                            img(src='img/logo-sonline.png')
+                            span Sonline
+                    .table-history__cell
+                        .table-history__sum 2&nbsp;000,00
+                    .table-history__cell
+                        .table-history__text срок действия до 08.01.2026
+                .table-history__row
+                    .table-history__cell
+                        .table-history__badge.table-history__badge_blue Потрачено
+                    .table-history__cell 30.09.2025 20:39
+                    .table-history__cell
+                        .table-history__partner
+                            img(src='img/logo-sonline.png')
+                            span Sonline
+                    .table-history__cell
+                        .table-history__sum -500,00
+                    .table-history__cell
+                        .table-history__text Оплата модуля «Картотека»
+                            .table-history__text-sub Пользователь Kristina
+                .table-history__row
+                    .table-history__cell
+                        .table-history__badge.table-history__badge_green Начислено
+                    .table-history__cell 30.09.2025 20:39
+                    .table-history__cell
+                        .table-history__partner
+                            img(src='img/logo-wazapa.png')
+                            span Wazapa
+                    .table-history__cell
+                        .table-history__sum 300,00
+                    .table-history__cell
+                        .table-history__text срок действия до 08.01.2026
+                .table-history__row
+                    .table-history__cell
+                        .table-history__badge.table-history__badge_red Сгорело
+                    .table-history__cell 30.09.2025 20:39
+                    .table-history__cell
+                    .table-history__cell
+                        .table-history__sum.table-history__sum_red −23,69
+                    .table-history__cell
+                        .table-history__text Непотраченные бонусы, начисленные 22.06.2025
+
+            .pagination
+                button.pagination__button.pagination__button_left(type='button')
+                    +icon-chevron-left('pagination__icon')
+                button.pagination__button(type='button') 1
+                button.pagination__button.pagination__button_active(type='button') 2
+                button.pagination__button(type='button') 3
+                button.pagination__button.pagination__button_desktop(type='button') 4
+                button.pagination__button.pagination__button_desktop(type='button') 5
+                button.pagination__button.pagination__button_disabled(type='button') ...
+                button.pagination__button(type='button') 6
+                button.pagination__button.pagination__button_right(type='button')
+                    +icon-chevron-left('pagination__icon pagination__icon_right')

@@ -4,8 +4,11 @@
 
 @use './components/footer.scss';
 @use './components/header.scss';
+@use './components/select.scss';
+@use './components/pagination.scss';
 
 @use './pages/index.scss';
+@use './pages/history.scss';
 
 * {
     box-sizing: border-box;

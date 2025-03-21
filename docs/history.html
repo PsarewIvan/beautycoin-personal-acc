@@ -7,6 +7,7 @@
     <meta content="" name="Keywords">
     <meta content="index,follow" name="robots">
     <title>Beautycoin</title>
+    <link rel="stylesheet" href="libs/slimselect.css">
     <link rel="stylesheet" href="css/index.css">
   </head>
   <body>
@@ -36,7 +37,138 @@
         </button>
       </div>
     </header>
-    <main class="main"></main>
+    <main class="main">
+      <div class="content">
+        <div class="content-title">
+          <div class="content-title__title-wrapper">
+            <h1 class="content-title__title">История операций</h1>
+          </div>
+        </div>
+        <div class="filters">
+              <div class="select-component-wrapper js-select-component-wrapper">
+                <select class="select-component js-select-component" data-placeholder="Тип операции">
+                  <option class="select-component__option" value="value1">Операция 1</option>
+                  <option class="select-component__option" value="value2">Операция 2</option>
+                </select>
+                <button class="select-component__reset hidden js-select-reset" type="button">
+                      <svg class="select-component__reset-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M13.0303 4.03033C13.3232 3.73744 13.3232 3.26256 13.0303 2.96967C12.7374 2.67678 12.2626 2.67678 11.9697 2.96967L8 6.93934L4.03033 2.96967C3.73744 2.67678 3.26256 2.67678 2.96967 2.96967C2.67678 3.26256 2.67678 3.73744 2.96967 4.03033L6.93934 8L2.96967 11.9697C2.67678 12.2626 2.67678 12.7374 2.96967 13.0303C3.26256 13.3232 3.73744 13.3232 4.03033 13.0303L8 9.06066L11.9697 13.0303C12.2626 13.3232 12.7374 13.3232 13.0303 13.0303C13.3232 12.7374 13.3232 12.2626 13.0303 11.9697L9.06066 8L13.0303 4.03033Z" fill="currentColor"></path>
+                      </svg>
+                </button>
+              </div>
+              <div class="select-component-wrapper js-select-component-wrapper">
+                <select class="select-component js-select-component">
+                  <option class="select-component__option" value="value1" selected>За месяц</option>
+                  <option class="select-component__option" value="value2">За день</option>
+                </select>
+                <button class="select-component__reset hidden js-select-reset" type="button">
+                      <svg class="select-component__reset-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M13.0303 4.03033C13.3232 3.73744 13.3232 3.26256 13.0303 2.96967C12.7374 2.67678 12.2626 2.67678 11.9697 2.96967L8 6.93934L4.03033 2.96967C3.73744 2.67678 3.26256 2.67678 2.96967 2.96967C2.67678 3.26256 2.67678 3.73744 2.96967 4.03033L6.93934 8L2.96967 11.9697C2.67678 12.2626 2.67678 12.7374 2.96967 13.0303C3.26256 13.3232 3.73744 13.3232 4.03033 13.0303L8 9.06066L11.9697 13.0303C12.2626 13.3232 12.7374 13.3232 13.0303 13.0303C13.3232 12.7374 13.3232 12.2626 13.0303 11.9697L9.06066 8L13.0303 4.03033Z" fill="currentColor"></path>
+                      </svg>
+                </button>
+              </div>
+              <div class="select-component-wrapper js-select-component-wrapper">
+                <select class="select-component js-select-component" data-placeholder="Партнёр">
+                  <option class="select-component__option" value="value1">Партнёр 1</option>
+                  <option class="select-component__option" value="value2">Партнёр 2</option>
+                </select>
+                <button class="select-component__reset hidden js-select-reset" type="button">
+                      <svg class="select-component__reset-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                        <path d="M13.0303 4.03033C13.3232 3.73744 13.3232 3.26256 13.0303 2.96967C12.7374 2.67678 12.2626 2.67678 11.9697 2.96967L8 6.93934L4.03033 2.96967C3.73744 2.67678 3.26256 2.67678 2.96967 2.96967C2.67678 3.26256 2.67678 3.73744 2.96967 4.03033L6.93934 8L2.96967 11.9697C2.67678 12.2626 2.67678 12.7374 2.96967 13.0303C3.26256 13.3232 3.73744 13.3232 4.03033 13.0303L8 9.06066L11.9697 13.0303C12.2626 13.3232 12.7374 13.3232 13.0303 13.0303C13.3232 12.7374 13.3232 12.2626 13.0303 11.9697L9.06066 8L13.0303 4.03033Z" fill="currentColor"></path>
+                      </svg>
+                </button>
+              </div>
+        </div>
+        <div class="table-history">
+          <div class="table-history__head">
+            <div class="table-history__cell-h">Тип</div>
+            <div class="table-history__cell-h">Дата и время</div>
+            <div class="table-history__cell-h">Партнёр</div>
+            <div class="table-history__cell-h table-history__cell-h_right">Сумма</div>
+            <div class="table-history__cell-h">Примечание</div>
+          </div>
+          <div class="table-history__row">
+            <div class="table-history__cell">
+              <div class="table-history__badge table-history__badge_green">Начислено</div>
+            </div>
+            <div class="table-history__cell">30.09.2025 20:39</div>
+            <div class="table-history__cell">
+              <div class="table-history__partner"><img src="img/logo-sonline.png"><span>Sonline</span></div>
+            </div>
+            <div class="table-history__cell">
+              <div class="table-history__sum">2&nbsp;000,00</div>
+            </div>
+            <div class="table-history__cell">
+              <div class="table-history__text">срок действия до 08.01.2026</div>
+            </div>
+          </div>
+          <div class="table-history__row">
+            <div class="table-history__cell">
+              <div class="table-history__badge table-history__badge_blue">Потрачено</div>
+            </div>
+            <div class="table-history__cell">30.09.2025 20:39</div>
+            <div class="table-history__cell">
+              <div class="table-history__partner"><img src="img/logo-sonline.png"><span>Sonline</span></div>
+            </div>
+            <div class="table-history__cell">
+              <div class="table-history__sum">-500,00</div>
+            </div>
+            <div class="table-history__cell">
+              <div class="table-history__text">Оплата модуля «Картотека»
+                <div class="table-history__text-sub">Пользователь Kristina</div>
+              </div>
+            </div>
+          </div>
+          <div class="table-history__row">
+            <div class="table-history__cell">
+              <div class="table-history__badge table-history__badge_green">Начислено</div>
+            </div>
+            <div class="table-history__cell">30.09.2025 20:39</div>
+            <div class="table-history__cell">
+              <div class="table-history__partner"><img src="img/logo-wazapa.png"><span>Wazapa</span></div>
+            </div>
+            <div class="table-history__cell">
+              <div class="table-history__sum">300,00</div>
+            </div>
+            <div class="table-history__cell">
+              <div class="table-history__text">срок действия до 08.01.2026</div>
+            </div>
+          </div>
+          <div class="table-history__row">
+            <div class="table-history__cell">
+              <div class="table-history__badge table-history__badge_red">Сгорело</div>
+            </div>
+            <div class="table-history__cell">30.09.2025 20:39</div>
+            <div class="table-history__cell"></div>
+            <div class="table-history__cell">
+              <div class="table-history__sum table-history__sum_red">−23,69</div>
+            </div>
+            <div class="table-history__cell">
+              <div class="table-history__text">Непотраченные бонусы, начисленные 22.06.2025</div>
+            </div>
+          </div>
+        </div>
+        <div class="pagination">
+          <button class="pagination__button pagination__button_left" type="button">
+                <svg class="pagination__icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5303 3.96967C15.8232 4.26256 15.8232 4.73744 15.5303 5.03033L8.56066 12L15.5303 18.9697C15.8232 19.2626 15.8232 19.7374 15.5303 20.0303C15.2374 20.3232 14.7626 20.3232 14.4697 20.0303L6.96967 12.5303C6.67678 12.2374 6.67678 11.7626 6.96967 11.4697L14.4697 3.96967C14.7626 3.67678 15.2374 3.67678 15.5303 3.96967Z"></path>
+                </svg>
+          </button>
+          <button class="pagination__button" type="button">1</button>
+          <button class="pagination__button pagination__button_active" type="button">2</button>
+          <button class="pagination__button" type="button">3</button>
+          <button class="pagination__button pagination__button_desktop" type="button">4</button>
+          <button class="pagination__button pagination__button_desktop" type="button">5</button>
+          <button class="pagination__button pagination__button_disabled" type="button">...</button>
+          <button class="pagination__button" type="button">6</button>
+          <button class="pagination__button pagination__button_right" type="button">
+                <svg class="pagination__icon pagination__icon_right" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5303 3.96967C15.8232 4.26256 15.8232 4.73744 15.5303 5.03033L8.56066 12L15.5303 18.9697C15.8232 19.2626 15.8232 19.7374 15.5303 20.0303C15.2374 20.3232 14.7626 20.3232 14.4697 20.0303L6.96967 12.5303C6.67678 12.2374 6.67678 11.7626 6.96967 11.4697L14.4697 3.96967C14.7626 3.67678 15.2374 3.67678 15.5303 3.96967Z"></path>
+                </svg>
+          </button>
+        </div>
+      </div>
+    </main>
     <footer class="footer">
       <ul class="footer__nav-list">
         <li class="footer-nav-element"><a class="footer-nav-element__link" href="./">
@@ -55,5 +187,6 @@
       </ul>
     </footer>
   </body>
+  <script src="libs/slimselect.js"></script>
   <script src="js/index.js"></script>
 </html>

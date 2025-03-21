@@ -1,0 +1,59 @@
+@use '../vars.scss';
+
+.pagination {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 4px;
+    padding: 16px 0;
+    margin-left: auto;
+    margin-right: auto;
+
+    &__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+        border: none;
+        border-radius: 8px;
+        background-color: transparent;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        color: #0190db;
+        text-align: center;
+        font-size: 16px;
+        line-height: 24px;
+        transition: all 0.2s;
+
+        &:hover:not(.index-pagination__button_disabled) {
+            color: #006fbc;
+        }
+
+        &_active {
+            color: #5c5c5c;
+            background-color: rgba(1, 144, 219, 0.08);
+        }
+
+        &_disabled {
+            color: #8f8f8f;
+            cursor: default;
+        }
+
+        // @include mobile {
+        //     &_desktop {
+        //         display: none;
+        //         visibility: hidden;
+        //     }
+        // }
+    }
+
+    &__icon {
+        width: 24px;
+        height: 24px;
+        fill: currentColor;
+
+        &_right {
+            transform: rotate(180deg);
+        }
+    }
+}

@@ -7,20 +7,20 @@ block header
 
     header.header
         .header__content
-            a.header__logo(href='/')
+            a.header__logo(href='./')
                 img(src='img/logo.svg')
             nav.nav
                 ul.nav__list
                     li.nav-element(class=page === 'index' ? 'nav-element_active' : '')
-                        a.nav-element__link(href='/' class=page === 'index' ? 'nav-element__link_active' : '')
+                        a.nav-element__link(href='./' class=page === 'index' ? 'nav-element__link_active' : '')
                             +icon-coin('nav-element__icon')
                             span Баланс
                     li.nav-element(class=page === 'history' ? 'nav-element_active' : '')
-                        a.nav-element__link(href='history.html' class=page === 'history' ? 'nav-element__link_active' : '')
+                        a.nav-element__link(href='./history.html' class=page === 'history' ? 'nav-element__link_active' : '')
                             +icon-left-right('nav-element__icon')
                             span История
                     li.nav-element(class=page === 'profile' ? 'nav-element_active' : '')
-                        a.nav-element__link(href='profile.html' class=page === 'profile' ? 'nav-element__link_active' : '')
+                        a.nav-element__link(href='./profile.html' class=page === 'profile' ? 'nav-element__link_active' : '')
                             +icon-user('nav-element__icon')
                             span Профиль
             button.header__button

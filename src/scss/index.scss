@@ -6,9 +6,13 @@
 @use './components/header.scss';
 @use './components/select.scss';
 @use './components/pagination.scss';
+@use './components/button.scss';
+@use './components/text-input.scss';
 
 @use './pages/index.scss';
 @use './pages/history.scss';
+@use './pages/profile.scss';
+@use './pages/forms.scss';
 
 * {
     box-sizing: border-box;

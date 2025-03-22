@@ -32,7 +32,16 @@
         }
 
         &_selected {
-            // border-bottom-color: vars.$link-500;
+            border-bottom-color: vars.$text-primary;
+            background-color: vars.$text-primary;
+
+            .ss-values {
+                color: vars.$text-primary-invert !important;
+            }
+
+            & ~ .select-component__reset {
+                color: vars.$text-secondary-invert;
+            }
 
             .select-component__label {
                 // color: #006fbc;

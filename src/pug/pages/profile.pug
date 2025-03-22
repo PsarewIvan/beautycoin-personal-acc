@@ -4,8 +4,27 @@ block variables
   - var page = 'profile'
 
 block content
-    //- include ../components/button.pug
-    //- include ../components/select.pug
-    //- include ../icons/icon-settings.pug
+    include ../components/button.pug
+    include ../icons/icon-copy.pug
+    include ../icons/icon-pencil.pug
 
     main.main
+        .content
+            .content-title
+                .content-title__title-wrapper
+                    h1.content-title__title Профиль
+            .profile
+                .profile__block
+                    .profile__texts
+                        .profile__title Beautycoin ID
+                        .profile__content 1234567890
+                    button.profile__button(type="button")
+                        +icon-copy('profile__button-icon')
+                .profile__block
+                    .profile__texts
+                        .profile__title Login
+                        .profile__content myemail@mail.ru
+                    button.profile__button(type="button")
+                        +icon-pencil('profile__button-icon')
+            div
+                +button({text: 'Изменить пароль', theme: 'secondary', className: 'profile__accept-button'})

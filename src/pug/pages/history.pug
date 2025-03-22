@@ -27,11 +27,11 @@ block content
                     .table-history__cell
                         .table-history__badge.table-history__badge_green Начислено
                     .table-history__cell 30.09.2025 20:39
-                    .table-history__cell
+                    .table-history__cell.table-history__cell_compact
                         .table-history__partner
                             img(src='img/logo-sonline.png')
                             span Sonline
-                    .table-history__cell
+                    .table-history__cell.table-history__cell_right
                         .table-history__sum 2&nbsp;000,00
                     .table-history__cell
                         .table-history__text срок действия до 08.01.2026
@@ -39,11 +39,11 @@ block content
                     .table-history__cell
                         .table-history__badge.table-history__badge_blue Потрачено
                     .table-history__cell 30.09.2025 20:39
-                    .table-history__cell
+                    .table-history__cell.table-history__cell_compact
                         .table-history__partner
                             img(src='img/logo-sonline.png')
                             span Sonline
-                    .table-history__cell
+                    .table-history__cell.table-history__cell_right
                         .table-history__sum -500,00
                     .table-history__cell
                         .table-history__text Оплата модуля «Картотека»
@@ -52,11 +52,11 @@ block content
                     .table-history__cell
                         .table-history__badge.table-history__badge_green Начислено
                     .table-history__cell 30.09.2025 20:39
-                    .table-history__cell
+                    .table-history__cell.table-history__cell_compact
                         .table-history__partner
                             img(src='img/logo-wazapa.png')
                             span Wazapa
-                    .table-history__cell
+                    .table-history__cell.table-history__cell_right
                         .table-history__sum 300,00
                     .table-history__cell
                         .table-history__text срок действия до 08.01.2026
@@ -64,18 +64,18 @@ block content
                     .table-history__cell
                         .table-history__badge.table-history__badge_red Сгорело
                     .table-history__cell 30.09.2025 20:39
-                    .table-history__cell
-                    .table-history__cell
+                    .table-history__cell.table-history__cell_compact
+                    .table-history__cell.table-history__cell_right
                         .table-history__sum.table-history__sum_red −23,69
                     .table-history__cell
                         .table-history__text Непотраченные бонусы, начисленные 22.06.2025
 
             .pagination
-                button.pagination__button.pagination__button_left(type='button')
+                button.pagination__button.pagination__button_left.pagination__button_disabled(type='button')
                     +icon-chevron-left('pagination__icon')
                 button.pagination__button(type='button') 1
                 button.pagination__button.pagination__button_active(type='button') 2
-                button.pagination__button(type='button') 3
+                button.pagination__button.pagination__button_desktop(type='button') 3
                 button.pagination__button.pagination__button_desktop(type='button') 4
                 button.pagination__button.pagination__button_desktop(type='button') 5
                 button.pagination__button.pagination__button_disabled(type='button') ...

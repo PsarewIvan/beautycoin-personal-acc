@@ -1,0 +1,29 @@
+extends ../layout.pug
+
+block variables
+  - var page = 'profile'
+
+block content
+    include ../components/button.pug
+    include ../components/text-input.pug
+    include ../components/pass-input.pug
+
+    main.main
+        .content
+            .content-title
+                .content-title__title-wrapper
+                    h2.content-title__title Изменить пароль
+            form.form(action="#")
+                +pass-input({label: 'Старый пароль'})
+                +pass-input({label: 'Новый пароль', addon: 'Пароль должен быть не менее 8 символов'})
+                .form__controls
+                    +button({text: 'Отмена', theme: 'secondary', className: 'form__accept-button'})
+                    +button({text: 'Изменить', theme: 'primary', className: 'form__cancel-button'})
+            .content-title
+                .content-title__title-wrapper
+                    h2.content-title__title Логин для входа в личный кабинет
+            form.form(action="#")
+                +text-input({label: 'Логин'})
+                .form__controls
+                    +button({text: 'Отмена', theme: 'secondary', className: 'form__accept-button'})
+                    +button({text: 'Сохранить', theme: 'primary', className: 'form__cancel-button'})

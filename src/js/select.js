@@ -12,7 +12,6 @@
         const dataOptions = Array.from(options).map((option) => ({
             text: option.innerHTML,
             value: option.value,
-            selected: option.selected,
         }));
 
         const slimSelect = new SlimSelect({
@@ -60,5 +59,12 @@
                 selectDiv.classList.remove('select-component_selected');
             }
         });
+
+        if (!placeholder) {
+            const arrow = selectWrapper?.querySelector('.ss-arrow');
+            selectDiv?.classList.add('select-component_selected');
+            reset?.classList.remove('hidden');
+            arrow?.classList.add('hidden');
+        }
     });
 })();

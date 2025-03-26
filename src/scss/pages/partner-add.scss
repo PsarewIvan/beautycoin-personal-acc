@@ -1,0 +1,65 @@
+@use '../vars.scss';
+
+.partner-title {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    &__img {
+        height: 20px;
+        object-fit: contain;
+    }
+
+    &__sub-title {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.partner-list {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding-left: 24px;
+    font-size: 16px;
+    line-height: 24px;
+
+    &__element {
+        margin-left: 8px;
+
+        p {
+            margin: 0;
+        }
+
+        a {
+            font-weight: 600;
+            text-decoration: none;
+            color: vars.$link-500;
+        }
+    }
+}
+
+.partner-form {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &__controls {
+        display: flex;
+        gap: 8px;
+        padding-top: 16px;
+    }
+}

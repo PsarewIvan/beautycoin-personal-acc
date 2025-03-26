@@ -1,0 +1,37 @@
+extends ../layout.pug
+
+block variables
+  - var page = 'partner'
+
+block content
+    include ../components/button.pug
+    include ../components/text-input.pug
+    include ../components/pass-input.pug
+
+    main.main
+        .content
+            .partner-title
+                .partner-title__block
+                    img.partner-title__img(src="img/partner-sonline.png")
+                    .partner-title__sub-title Программа для салона красоты с онлайн-записью
+                .partner-title__block
+                    .partner-title__text Sonline, при оплате любой лицензии, возвращает 10% от суммы на ваш бонусный счет в бьютикоинах
+            .content-title
+                .content-title__title-wrapper
+                    h2.content-title__title Как подключить партнёра к вашему ID
+            ol.partner-list
+                li
+                    .partner-list__element 
+                        p Перейдите по ссылке, чтобы открыть страницу партнёра 
+                        a(href="https://site.ru/y34hijkvb_aslvbnbolj=34rkkvas") https://site.ru/y34hijkvb_aslvbnbolj=34rkkvas
+                li
+                    .partner-list__element На открывшейся странице скопируйте ваш уникальный ключ.
+                li
+                    .partner-list__element Вернитесь сюда, вставьте скопированный ключ в поле ниже.
+                li
+                    .partner-list__element Нажмите кнопку «Подключить».
+            form.partner-form(action="#")
+                +text-input({label: 'Уникальный ключ', placeholder: 'Вставьте ключ'})
+                .partner-form__controls
+                    +button({text: 'Отмена', theme: 'secondary', className: 'partner-form__accept-button'})
+                    +button({text: 'Сохранить', theme: 'primary', className: 'partner-form__cancel-button'})

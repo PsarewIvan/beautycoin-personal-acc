@@ -1,0 +1,57 @@
+@use '../vars.scss';
+
+.card-id {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 274px;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: vars.$darkner-4;
+
+    @include vars.mobile {
+        width: 100%;
+    }
+
+    &__block {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__title-block {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding-bottom: 8px;
+    }
+
+    &__title {
+        font-size: 14px;
+        line-height: 20px;
+        color: vars.$text-secondary;
+    }
+
+    &__number {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__copy-block {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: auto;
+    }
+
+    &__copy {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+    }
+
+    &__copy-icon {
+        width: 24px;
+        height: 24px;
+    }
+}

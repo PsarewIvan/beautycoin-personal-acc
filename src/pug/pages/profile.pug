@@ -9,22 +9,56 @@ block content
     include ../icons/icon-pencil.pug
 
     main.main
-        .content
-            .content-title
-                .content-title__title-wrapper
-                    h1.content-title__title Профиль
-            .profile
-                .profile__block
-                    .profile__texts
-                        .profile__title Beautycoin ID
-                        .profile__content 1234567890
-                    button.profile__button(type="button")
-                        +icon-copy('profile__button-icon')
-                .profile__block
-                    .profile__texts
-                        .profile__title Login
-                        .profile__content myemail@mail.ru
-                    button.profile__button(type="button")
-                        +icon-pencil('profile__button-icon')
-            div
-                +button({text: 'Изменить пароль', theme: 'secondary', className: 'profile__accept-button'})
+        .content.content_profile
+            .content-profile
+                .content-title
+                    .content-title__title-wrapper
+                        h1.content-title__title Профиль
+                .profile
+                    .card-id
+                        .card-id__block
+                            .card-id__title-block
+                                .card-id__title Beautycoin ID
+                                .card-id__number 1234 5678 9012 3456
+                            .card-id__copy-block
+                                button.button-icon.card-id__copy(type="button")
+                                    +icon-copy('card-id__copy-icon')
+                        .card-id__block
+                            .card-id__title-block
+                                .card-id__title Login
+                                .card-id__number myemail@mail.ru
+                            .card-id__copy-block
+                                button.button-icon.card-id__copy(type="button")
+                                    +icon-pencil('card-id__copy-icon')
+                    div
+                        +button({text: 'Изменить пароль', theme: 'secondary', className: 'profile__accept-button'})
+            .content-profile
+                .content-title
+                    .content-title__title-wrapper
+                        h2.content-title__title Где копятся бьютикоины
+                            span.content-title__count 1
+                .profile-cards
+                    .profile-card.profile-card_selected
+                        .profile-card__block
+                            img.profile-card__img(src="img/logo-sonline.png")
+                        .profile-card__block.profile-card__block_content
+                            .profile-card__title SONLINE
+                            .profile-card__text Программа для салона красоты с онлайн-записью
+                        .profile-card__block
+                            .badge.badge_green Подключено
+                    .profile-card
+                        .profile-card__block
+                            img.profile-card__img(src="img/logo-wazapa.png")
+                        .profile-card__block.profile-card__block_content
+                            .profile-card__title Wazapa
+                            .profile-card__text сервис отправки сообщений в WhatsApp
+                        .profile-card__block
+                            a.profile-card__link(href="./partner-add.html") Подключить
+                    .profile-card
+                        .profile-card__block
+                            img.profile-card__img(src="img/logo-trendista.png")
+                        .profile-card__block.profile-card__block_content
+                            .profile-card__title Trendista Global
+                            .profile-card__text Ежемесячная статистика рынка салонов красоты
+                        .profile-card__block
+                            a.profile-card__link(href="./partner-add.html") Подключить

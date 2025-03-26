@@ -1,53 +1,74 @@
 @use '../vars.scss';
 
+.content-profile {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
 .profile {
     display: flex;
-    gap: 32px;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.profile-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
 
     @include vars.mobile {
+        display: flex;
         flex-direction: column;
-        gap: 16px;
+    }
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px 16px 24px;
+    border-radius: 24px;
+    border: 1px dashed vars.$link-500;
+    background-color: vars.$background-primary;
+
+    &_selected {
+        border: 1px solid vars.$darkner-16;
     }
 
     &__block {
         display: flex;
-        gap: 8px;
+        flex-direction: column;
+
+        &_content {
+            gap: 2px;
+            padding-bottom: 16px;
+        }
     }
 
-    &__texts {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        padding-bottom: 8px;
+    &__img {
+        width: 64px;
+        height: 64px;
+        object-fit: contain;
     }
 
     &__title {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 32px;
+        letter-spacing: -0.2px;
+    }
+
+    &__text {
         font-size: 14px;
         line-height: 20px;
-        color: vars.$text-secondary;
     }
 
-    &__content {
+    &__link {
         font-size: 16px;
+        font-weight: 600;
         line-height: 24px;
-    }
-
-    &__button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 40px;
-        height: 40px;
-        margin: auto 0 0;
-        padding: 0;
-        border: none;
-        background-color: transparent;
-        color: vars.$text-primary;
-        cursor: pointer;
-
-        &__button-icon {
-            width: 24px;
-            height: 24px;
-        }
+        color: vars.$link-500;
+        text-decoration: none;
     }
 }

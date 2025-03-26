@@ -1,86 +1,9 @@
 @use '../vars.scss';
 
-.content {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-    max-width: 1200px;
-    width: 100%;
-    margin: 80px auto 0;
-    padding: 24px;
-
-    @include vars.tablet {
-        margin-bottom: 72px;
-    }
-
-    @include vars.mobile {
-        padding: 24px 16px;
-        margin-bottom: 76px;
-    }
-
-    &_index {
-        display: grid;
-        grid-template-columns: max-content 1fr;
-        gap: 32px;
-
-        @include vars.tablet {
-            display: flex;
-            flex-direction: column-reverse;
-        }
-    }
-}
-
 .content-index {
     display: flex;
     flex-direction: column;
     gap: 32px;
-}
-
-.content-title {
-    display: flex;
-    flex-direction: column;
-    gap: 32px;
-
-    &__title-wrapper {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-    }
-
-    &__title {
-        margin: 0;
-        font-size: 24px;
-        font-weight: 900;
-        line-height: 32px;
-        letter-spacing: -0.48px;
-    }
-
-    &__balance {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-size: 96px;
-        line-height: 112px;
-        letter-spacing: -5.76px;
-
-        @include vars.mobile {
-            gap: 4px;
-            font-size: 48px;
-            line-height: 58px;
-            letter-spacing: -1.92px;
-        }
-    }
-
-    &__icon {
-        flex-shrink: 0;
-        width: 84px;
-        height: 84px;
-
-        @include vars.mobile {
-            width: 42px;
-            height: 42px;
-        }
-    }
 }
 
 .transfer {
@@ -133,72 +56,6 @@
         width: 100%;
     }
 
-    &_accrued {
-        .transfer-card__title {
-            background-color: vars.$success-50;
-        }
-
-        .transfer-card__title {
-            color: vars.$success-600;
-
-            &::before {
-                background-image: url('../img/plus.svg');
-            }
-        }
-    }
-
-    &_spent {
-        .transfer-card__title {
-            background-color: vars.$link-50;
-        }
-
-        .transfer-card__title {
-            color: vars.$link-600;
-
-            &::before {
-                background-image: url('../img/check.svg');
-            }
-        }
-    }
-
-    &_burned {
-        .transfer-card__title {
-            background-color: vars.$error-50;
-        }
-
-        .transfer-card__title {
-            color: vars.$error-600;
-
-            &::before {
-                background-image: url('../img/fire.svg');
-            }
-        }
-    }
-
-    &__title {
-        width: fit-content;
-        display: flex;
-        align-items: center;
-        flex-wrap: nowrap;
-        gap: 4px;
-        padding: 2px 8px 2px 2px;
-        border-radius: 99px;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 20px;
-
-        &::before {
-            flex-shrink: 0;
-            content: '';
-            display: block;
-            width: 20px;
-            height: 20px;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 100%;
-        }
-    }
-
     &__balance {
         display: flex;
         align-items: center;
@@ -220,61 +77,5 @@
             background-position: center;
             background-size: 100%;
         }
-    }
-}
-
-.card-index {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 274px;
-    padding: 24px;
-    border-radius: 24px;
-    background-color: vars.$darkner-4;
-
-    @include vars.mobile {
-        width: 100%;
-    }
-
-    &__block {
-        display: flex;
-        gap: 8px;
-    }
-
-    &__title-block {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        padding-bottom: 8px;
-    }
-
-    &__title {
-        font-size: 14px;
-        line-height: 20px;
-        color: vars.$text-secondary;
-    }
-
-    &__number {
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    &__copy-block {
-        flex-shrink: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: auto;
-    }
-
-    &__copy {
-        flex-shrink: 0;
-        width: 40px;
-        height: 40px;
-    }
-
-    &__copy-icon {
-        width: 24px;
-        height: 24px;
     }
 }

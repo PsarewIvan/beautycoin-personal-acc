@@ -24,28 +24,28 @@ block content
                     .transfer__cards
                         .transfer-card.transfer-card_accrued
                             .transfer-card__balance 241&nbsp;916,25
-                            .transfer-card__title Начислено
+                            .badge.badge_green Начислено
                         .transfer-card.transfer-card_spent
                             .transfer-card__balance 241&nbsp;916,25
-                            .transfer-card__title Потрачено
+                            .badge.badge_blue Потрачено
                         .transfer-card.transfer-card_burned
                             .transfer-card__balance 241&nbsp;916,25
-                            .transfer-card__title Сгорело
+                            .badge.badge_red Сгорело
             .content-card
-                .card-index
-                    .card-index__block
-                        .card-index__title-block
-                            .card-index__title Beautycoin ID
-                            .card-index__number 1234 5678 9012 3456
-                        .card-index__copy-block
-                            button.button-icon.card-index__copy(type="button")
-                                +icon-copy('card-index__copy-icon')
-                    .card-index__block
-                        .card-index__title-block
-                            .card-index__title CVV
-                            .card-index__number •••
-                            .card-index__number.hidden 123
-                        .card-index__copy-block
-                            button.button-icon.card-index__copy(type="button")
-                                +icon-eye-closed('card-index__copy-icon')
-                                +icon-eye-open('card-index__copy-icon hidden')
+                .card-id
+                    .card-id__block
+                        .card-id__title-block
+                            .card-id__title Beautycoin ID
+                            .card-id__number 1234 5678 9012 3456
+                        .card-id__copy-block
+                            button.button-icon.card-id__copy(type="button")
+                                +icon-copy('card-id__copy-icon')
+                    .card-id__block
+                        .card-id__title-block
+                            .card-id__title CVV
+                            .card-id__number.js-cvv-1-dot •••
+                            .card-id__number.js-cvv-1-number.hidden 123
+                        .card-id__copy-block
+                            button.button-icon.card-id__copy.js-cvv-button(type="button" data-cvv-id="js-cvv-1")
+                                +icon-eye-closed('card-id__copy-icon')
+                                +icon-eye-open('card-id__copy-icon hidden')

@@ -17,12 +17,29 @@
         padding: 24px 16px;
         margin-bottom: 76px;
     }
+
+    &_index {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 32px;
+
+        @include vars.tablet {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+.content-index {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 .content-title {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 32px;
 
     &__title-wrapper {
         display: flex;
@@ -36,20 +53,6 @@
         font-weight: 900;
         line-height: 32px;
         letter-spacing: -0.48px;
-    }
-
-    &__sub-title {
-        display: flex;
-        gap: 4px;
-        font-size: 16px;
-        line-height: 24px;
-    }
-
-    &__link {
-        text-decoration: none;
-        font-size: 16px;
-        line-height: 24px;
-        color: vars.$link-500;
     }
 
     &__balance {
@@ -86,19 +89,31 @@
     gap: 16px;
 
     &__title {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
         font-size: 24px;
         font-weight: 900;
         line-height: 32px;
         letter-spacing: -0.48px;
     }
 
+    &__title-link {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        color: vars.$link-600;
+        text-decoration: none;
+    }
+
     &__cards {
         display: flex;
-        gap: 16px;
+        gap: 32px;
         flex-wrap: wrap;
 
         @include vars.mobile {
             flex-direction: column;
+            gap: 16px;
         }
     }
 }
@@ -108,12 +123,10 @@
     display: flex;
     flex-direction: column;
     gap: 8px;
-    width: 240px;
-    padding: 16px 24px;
-    border-radius: 24px;
+    width: 149px;
 
     @include vars.tablet {
-        width: 229px;
+        // width: 229px;
     }
 
     @include vars.mobile {
@@ -121,7 +134,9 @@
     }
 
     &_accrued {
-        background-color: vars.$success-50;
+        .transfer-card__title {
+            background-color: vars.$success-50;
+        }
 
         .transfer-card__title {
             color: vars.$success-600;
@@ -133,7 +148,9 @@
     }
 
     &_spent {
-        background-color: vars.$link-50;
+        .transfer-card__title {
+            background-color: vars.$link-50;
+        }
 
         .transfer-card__title {
             color: vars.$link-600;
@@ -145,7 +162,9 @@
     }
 
     &_burned {
-        background-color: vars.$error-50;
+        .transfer-card__title {
+            background-color: vars.$error-50;
+        }
 
         .transfer-card__title {
             color: vars.$error-600;
@@ -157,20 +176,23 @@
     }
 
     &__title {
+        width: fit-content;
         display: flex;
         align-items: center;
         flex-wrap: nowrap;
         gap: 4px;
-        font-size: 16px;
-        font-weight: 600;
-        line-height: 24px;
+        padding: 2px 8px 2px 2px;
+        border-radius: 99px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
 
         &::before {
             flex-shrink: 0;
             content: '';
             display: block;
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             background-repeat: no-repeat;
             background-position: center;
             background-size: 100%;
@@ -198,5 +220,61 @@
             background-position: center;
             background-size: 100%;
         }
+    }
+}
+
+.card-index {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 274px;
+    padding: 24px;
+    border-radius: 24px;
+    background-color: vars.$darkner-4;
+
+    @include vars.mobile {
+        width: 100%;
+    }
+
+    &__block {
+        display: flex;
+        gap: 8px;
+    }
+
+    &__title-block {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        padding-bottom: 8px;
+    }
+
+    &__title {
+        font-size: 14px;
+        line-height: 20px;
+        color: vars.$text-secondary;
+    }
+
+    &__number {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__copy-block {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: auto;
+    }
+
+    &__copy {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+    }
+
+    &__copy-icon {
+        width: 24px;
+        height: 24px;
     }
 }

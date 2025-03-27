@@ -21,15 +21,17 @@ block content
                                 .card-id__title Beautycoin ID
                                 .card-id__number 1234 5678 9012 3456
                             .card-id__copy-block
-                                button.button-icon.card-id__copy(type="button")
+                                button.button-icon.card-id__copy.tooltip-trigger.js-tooltip-trigger(type="button")
                                     +icon-copy('card-id__copy-icon')
+                                    +tooltip({text: 'ID скопирован', className: 'card-id__copy-tooltip card-id__copy-tooltip_check-green'})
                         .card-id__block
                             .card-id__title-block
                                 .card-id__title Login
                                 .card-id__number myemail@mail.ru
                             .card-id__copy-block
-                                button.button-icon.card-id__copy(type="button")
+                                button.button-icon.card-id__copy.tooltip-trigger.js-tooltip-trigger(type="button")
                                     +icon-pencil('card-id__copy-icon')
+                                    +tooltip({text: 'Изменить'})
                     div
                         +button({text: 'Изменить пароль', theme: 'secondary', className: 'profile__accept-button'})
             .content-profile

@@ -4,6 +4,7 @@ block variables
   - var page = 'index'
 
 block content
+    include ../components/tooltip.pug
     include ../icons/icon-coin.pug
     include ../icons/icon-copy.pug
     include ../icons/icon-eye-closed.pug
@@ -38,14 +39,17 @@ block content
                             .card-id__title Beautycoin ID
                             .card-id__number 1234 5678 9012 3456
                         .card-id__copy-block
-                            button.button-icon.card-id__copy(type="button")
+                            button.button-icon.card-id__copy.tooltip-trigger.js-tooltip-trigger(type="button")
                                 +icon-copy('card-id__copy-icon')
+                                +tooltip({text: 'Копировать ID'})
                     .card-id__block
                         .card-id__title-block
                             .card-id__title CVV
                             .card-id__number.js-cvv-1-dot •••
                             .card-id__number.js-cvv-1-number.hidden 123
                         .card-id__copy-block
-                            button.button-icon.card-id__copy.js-cvv-button(type="button" data-cvv-id="js-cvv-1")
-                                +icon-eye-closed('card-id__copy-icon')
-                                +icon-eye-open('card-id__copy-icon hidden')
+                            button.button-icon.card-id__copy.js-cvv-button.tooltip-trigger.js-tooltip-trigger(type="button" data-cvv-id="js-cvv-1")
+                                +icon-eye-closed('card-id__copy-icon js-cvv-icon-closed')
+                                +icon-eye-open('card-id__copy-icon hidden js-cvv-icon-open')
+                                +tooltip({text: 'Показать', className: 'js-cvv-tooltip-open'})
+                                +tooltip({text: 'Скрыть', className: 'js-cvv-tooltip-closed hidden'})

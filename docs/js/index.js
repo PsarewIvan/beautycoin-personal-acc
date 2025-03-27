@@ -5,10 +5,18 @@
         const dataId = button.dataset.cvvId;
         const dot = document.querySelector(`.${dataId}-dot`);
         const number = document.querySelector(`.${dataId}-number`);
+        const iconClosed = button.querySelector('.js-cvv-icon-closed');
+        const iconOpen = button.querySelector('.js-cvv-icon-open');
+        const tooltipOpen = button.querySelector('.js-cvv-tooltip-open');
+        const tooltipClosed = button.querySelector('.js-cvv-tooltip-closed');
 
         button.addEventListener('click', () => {
             dot?.classList.toggle('hidden');
             number?.classList.toggle('hidden');
+            iconClosed?.classList.toggle('hidden');
+            iconOpen?.classList.toggle('hidden');
+            tooltipOpen?.classList.toggle('hidden');
+            tooltipClosed?.classList.toggle('hidden');
         });
     });
 })();
@@ -146,6 +154,48 @@
             arrow?.classList.add('hidden');
         }
     });
+})();
+
+(() => {
+    const TOOLTIP_LEFT_CLASS = 'tooltip_left';
+    const TOOLTIP_BOTTOM_CLASS = 'tooltip_bottom';
+
+    document.addEventListener('DOMContentLoaded', function () {
+        window.addEventListener('resize', initTooltip);
+        initTooltip();
+    });
+
+    function initTooltip() {
+        const triggers = document.querySelectorAll('.js-tooltip-trigger');
+
+        triggers?.forEach((trigger) => {
+            const tooltip = trigger.querySelector('.js-tooltip');
+
+            if (tooltip) {
+                adjustTooltipPosition(tooltip);
+            }
+        });
+    }
+
+    function adjustTooltipPosition(tooltip) {
+        // tooltip.classList.remove(TOOLTIP_LEFT_CLASS);
+        tooltip.classList.remove(TOOLTIP_BOTTOM_CLASS);
+
+        const viewportWidth = window.innerWidth;
+        const tooltipRect = tooltip.getBoundingClientRect();
+
+        const tooltipRightPointX = tooltipRect.left + tooltipRect.width;
+        const tooltipTopPointY = tooltipRect.top;
+
+        if (tooltipRightPointX > viewportWidth) {
+            // For right position
+            // tooltip.classList.add(TOOLTIP_LEFT_CLASS);
+        }
+
+        if (tooltipTopPointY < 0) {
+            tooltip.classList.add(TOOLTIP_BOTTOM_CLASS);
+        }
+    }
 })();
 
 //# sourceMappingURL=index.js.map

@@ -1,5 +1,6 @@
 block header
 
+    include ../components/tooltip.pug
     include ../icons/icon-exit.pug
     include ../icons/icon-coin.pug
     include ../icons/icon-user.pug
@@ -23,5 +24,6 @@ block header
                         a.nav-element__link(href='./profile.html' class=page === 'profile' ? 'nav-element__link_active' : '')
                             +icon-user('nav-element__icon')
                             span Профиль
-            button.button-icon.header__button
+            button.button-icon.header__button.tooltip-trigger.js-tooltip-trigger
                 +icon-exit('header__button-icon')
+                +tooltip({text: 'Выйти из учетной записи'})

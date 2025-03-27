@@ -19,6 +19,7 @@
     }
 
     &__title-block {
+        width: calc(100% - 40px - 8px);
         display: flex;
         flex-direction: column;
         gap: 4px;
@@ -34,6 +35,9 @@
     &__number {
         font-size: 16px;
         line-height: 24px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     &__copy-block {

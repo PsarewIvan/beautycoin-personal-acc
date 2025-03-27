@@ -36,25 +36,37 @@
     &_green {
         background-color: vars.$success-100;
         color: vars.$success-600;
-
-        &::before {
-            background-image: url('../img/plus.svg');
-        }
     }
 
     &_blue {
         background-color: vars.$link-100;
         color: vars.$link-600;
-
-        &::before {
-            background-image: url('../img/check.svg');
-        }
     }
 
     &_red {
         background-color: vars.$error-100;
         color: vars.$error-600;
+    }
 
+    &_plus {
+        &::before {
+            background-image: url('../img/plus.svg');
+        }
+    }
+
+    &_check {
+        &::before {
+            background-image: url('../img/check.svg');
+        }
+    }
+
+    &_check-green {
+        &::before {
+            background-image: url('../img/check-green.svg');
+        }
+    }
+
+    &_fire {
         &::before {
             background-image: url('../img/fire.svg');
         }

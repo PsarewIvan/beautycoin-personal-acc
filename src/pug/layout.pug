@@ -11,10 +11,18 @@ html
         link(rel="stylesheet" href="libs/slimselect.css")
         link(rel="stylesheet" href="css/index.css")
     body
+        include components/button-modal.pug
+        include components/popup-support.pug
+        include components/popup-success.pug
+
         block header
             include includes/header.pug
 
         block content
+
+        +button-modal({text: 'Есть вопросы? Пишите', className: 'js-support-button'})
+        +popup-support()
+        +popup-success()
 
         block footer
             include includes/footer.pug
